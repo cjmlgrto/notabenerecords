@@ -43,13 +43,16 @@ body {
 
 h1 {
 	font-size: 42px;
-	font-weight: "heavy";
 }
 
 a {
 	color: #000;
 	text-decoration: none;
 	border-bottom: 2px solid rgba(0,0,0,.1);
+}
+
+p {
+	margin-bottom: 1rem;
 }
 
 
@@ -95,7 +98,8 @@ section {
 
 
 .section-header {
-	margin: 1rem 0 3rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 	.section-header h1 {
@@ -183,7 +187,7 @@ section {
 		width: calc(50% - (2 * 2%) - 2px);
 	}
 
-	.tile-large {
+	.half-width {
 		float: none;
 		width: calc(100% - (2 * 2%) - 4px);
 	}
