@@ -5,7 +5,13 @@
 	<body>
 		{% include header.html %}
 
-		{{ content }}
+		{{ page.name }}
+
+		{% for album in page.albums %}
+		<ul>
+			<li>{{ album.title }} — {{ album.year }}</li>
+		</ul>
+		{% endfor %}
 
 		{% include footer.html %}
 	</body>

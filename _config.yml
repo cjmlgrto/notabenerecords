@@ -1,8 +1,14 @@
 name: Nota Bene Records
-url:
+description: The website for Nota Bene Records
 author:
-description:
+url:
+
 twitter:
 color:
 
 markdown: kramdown
+
+collections:
+  artists:
+    output: true
+    permalink: /artists/:path/
