@@ -1,7 +1,9 @@
 div {
-	height: 32px;
+	min-height: 32px;
 	background-color: rgba(0,0,0,.1);
 }
+
+/* @group grid */
 
 * {
 	margin: 0;
@@ -11,6 +13,47 @@ div {
 }
 
 .container {
-	max-width: 1000px;
 	margin: 0 auto;
+	max-width: 960px;
 }
+
+.grid { text-align: center; }
+
+	.col {
+		vertical-align: top;
+		display: inline-block;
+		margin-left: calc(2% - 2px);
+		margin-right: calc(2% - 2px);
+	}
+
+	.full-width { width: calc(100% - (2 * 2%) - 4px); }
+	.half-width { width: calc(50% - (2 * 2%) - 2px); }
+	.quarter-width { width: calc(25% - (2 * 2%) - 1px); }
+
+/* @end */
+
+/* @group breakpoints */
+
+@media (max-width: 720px) {
+
+	.quarter-width {
+		width: calc(50% - (2 * 2%) - 2px);
+	}
+
+}
+
+@media (max-width: 320px) {
+
+	.col,
+	.full-width,
+	.half-width,
+	.quarter-width {
+		display: block;
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
+
+}
+
+/* @end */
