@@ -1,8 +1,7 @@
 <header>
-	<a href="/">{{ page.title }}</a>
-	<ul>
-		{% for page in site.pages %}
-			<li><a href="{{ page.url }}">{{ page.title }}</a></li>
-		{% endfor %}
-	</ul>
+	<div class="grid container">
+		<div class="col full-width">
+			{% include nav.html %}
+		</div>
+	</div>
 </header>

@@ -1,11 +1,30 @@
 ---
-layout: default
 title: Artists
+subtitle: "Page description"
+
+layout: default
+weight: 1
 ---
 
-{% for artist in site.artists %}
-<ul>
-	{% assign name = artist.name %}
-	<li><a href="/artists/{{ name | downcase }}">{{ name }}</a> — {{ artist.albums | size }} albums</li>
-</ul>
-{% endfor %}
+<section>
+	<div class="grid container">
+		<div class="col two_third-width section-header">
+			<h1>{{ page.title }}</h1>
+			<p>{{ page.subtitle }}</p>
+		</div>
+
+		<div class="shelf">
+			{% for artist in site.artists %}
+				{% assign name = artist.name %}
+				{% assign numberOfAlbums = artist.albums | size %}
+				<a class="col quarter-width tile" href="/artists/{{ name | downcase | slugify }}">
+					<div class="thumbnail" style="background-image:url({{ artist.thumbnail }})"></div>
+					<div class="meta">
+						<span class="title">{{ name }}</span>
+						<span class="subtitle">{{ numberOfAlbums }} album{% if numberOfAlbums > 1%}s{% endif %}</span>
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>

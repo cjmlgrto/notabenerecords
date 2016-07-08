@@ -5,13 +5,37 @@
 	<body>
 		{% include header.html %}
 
-		{{ page.name }}
+		<section class="banner" style="background-image:url({{ page.coverPhoto }})"></section>
 
-		{% for album in page.albums %}
-		<ul>
-			<li>{{ album.title }} — {{ album.year }}</li>
-		</ul>
-		{% endfor %}
+		<section>
+			<div class="grid container">
+				<div class="col two_third-width section-header">
+					<span class="overtitle">Artist Spotlight</span>
+					<h1>{{ page.title }}</h1>
+					<p>{{ page.description }}</p>
+					<a class="button primary" href="{{ page.website }}">View Official Website</a>
+					{% if page.facebook or page.twitter or page.google %}
+						<ul class="social-media">
+							{% if page.facebook %}<li><a href="{{ page.facebook }}" class="facebook">Facebook</a></li>{% endif %}
+							{% if page.twitter %}<li><a href="{{ page.twitter }}" class="twitter">Twitter</a></li>{% endif %}
+							{% if page.google %}<li><a href="{{ page.google }}" class="facebook">Google+</a></li>{% endif %}
+						</ul>
+					{% endif %}
+				</div>
+
+				<div class="shelf">
+					{% for album in page.albums %}
+						<a class="col quarter-width tile" href="{{ album.link }}">
+							<div class="thumbnail" style="background-image:url({{ album.artwork }})"></div>
+							<div class="meta">
+								<span class="title">{{ album.title }}</span>
+								<span class="subtitle">{{ album.year }}</span>
+							</div>
+						</a>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
 
 		{% include footer.html %}
 	</body>

@@ -3,4 +3,100 @@ layout: default
 title: Nota Bene Records
 ---
 
-<h1>Hello World</h1>
+{% for artist in site.artists %}
+	{% if artist.featured == true %}
+		<section class="banner" style="background-image:url({{ artist.coverPhoto }})"></section>
+
+		<section>
+			<div class="grid container">
+				<div class="col two_third-width section-header">
+					<span class="overtitle">Artist Spotlight</span>
+					<h1>{{ artist.name }}</h1>
+					<p>{{ artist.description }}</p>
+				</div>
+				<div class="shelf">
+
+					<div class="col half-width tile-large">
+						<div class="thumbnail" style="background-image:url({{ artist.thumbnail }})"></div>
+					</div>
+
+					{% for album in artist.albums limit:2 %}
+						<a class="col quarter-width tile" href="{{ album.url }}">
+							<div class="thumbnail" style="background-image:url({{ album.artwork }})"></div>
+							<div class="meta">
+								<span class="title">{{ album.title }}</span>
+								<span class="subtitle">{{ album.year }}</span>
+							</div>
+						</a>
+					{% endfor %}
+
+					<div class="col half-width tile actions">
+						<a class="button" href="/artists/{{ artist.name | downcase | slugify }}">View Artist Page</a>
+						<a class="button" href="{{ artist.website }}">View Official Website</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+	{% endif %}
+{% endfor %}
+
+<section>
+	<div class="grid container">
+		<div class="col two_third-width section-header">
+			<h1>Featured Albums</h1>
+			<p>Featured albums description</p>
+		</div>
+		<div class="shelf">
+			{% for artist in site.artists %}
+				{% for album in artist.albums %}
+					{% if album.featured == true %}
+						<a class="col quarter-width tile" href="{{ album.link }}">
+							<div class="thumbnail" style="background-image:url({{ album.artwork }})"></div>
+							<div class="meta">
+								<span class="title">{{ album.title }}</span>
+								<span class="subtitle">{{ album.year }}</span>
+							</div>
+						</a>
+					{% endif %}
+				{% endfor %}
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="grid container">
+		<div class="col two_third-width section-header">
+			<h1>Featured Partners</h1>
+			<p>Featured partners description</p>
+		</div>
+		<div class="shelf">
+			{% for partner in site.partners %}
+				{% if partner.featured == true %}
+					<a class="col quarter-width tile" href="{{ partner.website }}">
+						<div class="thumbnail" style="background-image:url({{ partner.thumbnail }})"></div>
+						<div class="meta">
+							<span class="title">{{ partner.name }}</span>
+						</div>
+					</a>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="grid container">
+		<div class="col half-width section-header">
+			<h1>Calling all musicians</h1>
+			<p>Whether you’re a solo performer or a perfect-circle band, contact us and apply for a partnership. Get your music produced, published, and heard.</p>
+			<a class="button primary" href="mailto:{{ site.email }}?subject=Apply">Apply as a musician</a>
+		</div>
+		<div class="col half-width section-header">
+			<h1>Promote your brand</h1>
+			<p>Want to support artists, while at the same time, promote your company brand? Apply for a sponsorship spot, and partner with an artist.</p>
+			<a class="button secondary" href="mailto:{{ site.email }}?subject=Apply">Apply as a sponsor</a>
+		</div>
+	</div>
+</section>

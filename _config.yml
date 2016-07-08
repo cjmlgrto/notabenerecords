@@ -1,6 +1,6 @@
 name: Nota Bene Records
 description: The website for Nota Bene Records
-author:
+author: Nota Bene Records
 url:
 
 twitter:
@@ -12,3 +12,18 @@ collections:
   artists:
     output: true
     permalink: /artists/:path/
+  partners:
+    output: false
+  store:
+    output: true
+    permalink: /store/:path/
+
+defaults:
+  - scope:
+      type: artists
+    values:
+      layout: artist
+  - scope:
+      type: store
+    values:
+      layout: store

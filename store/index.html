@@ -1,0 +1,27 @@
+---
+title: Store
+subtitle: "Page description"
+
+layout: default
+weight: 3
+---
+
+<section>
+	<div class="grid container">
+		<div class="col two_third-width section-header">
+			<h1>{{ page.title }}</h1>
+			<p>{{ page.subtitle }}</p>
+		</div>
+
+		<div class="shelf">
+			{% for item in site.store %}
+				<a class="col quarter-width tile" href="/store/{{ item.name | downcase | slugify }}">
+					<div class="thumbnail" style="background-image:url({{ item.thumbnail }})"></div>
+					<div class="meta">
+						<span class="title">{{ item.name }}</span>
+					</div>
+				</a>
+			{% endfor %}
+		</div>
+	</div>
+</section>
