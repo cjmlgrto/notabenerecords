@@ -45,6 +45,10 @@ h1 {
 	font-size: 42px;
 }
 
+h2 {
+	font-size: 24px;
+}
+
 a {
 	color: #000;
 	text-decoration: none;
@@ -53,6 +57,18 @@ a {
 
 p {
 	margin-bottom: 1rem;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav a {
+	border-bottom: none;
 }
 
 
@@ -86,6 +102,54 @@ p {
 
 	.tertiary {
 		background-color: #1C9AF8;
+	}
+
+/* @end */
+
+/* @group header */
+
+header {
+	padding: 32px 16px;
+}
+
+header:after {
+	width: 100%;
+	height: 1px;
+	clear: both;
+	content: '';
+	display: block;
+}
+
+header a {
+	border-bottom: none;
+}
+
+.site-logo {
+	float: left;
+	margin-top: .5rem;
+	font-size: 24px;
+}
+
+.site-nav {
+	float: right;
+}
+
+	.site-nav li {
+		font-size: 20px;
+		margin-left: 2rem;
+	}
+
+	.site-nav a {
+		color: #8E8E93;
+	}
+
+	.site-nav .button {
+		color: #FFFFFF;
+	}
+
+	.site-nav .active {
+		font-weight: bold;
+		color: #000000;
 	}
 
 /* @end */
