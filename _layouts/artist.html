@@ -5,9 +5,11 @@
 	<body>
 		{% include header.html %}
 
-		<section class="banner" style="background-image:url({{ page.coverPhoto }})"></section>
+		{% if page.coverPhoto %}
+			<section class="banner" style="background-image:url({{ page.coverPhoto }})"></section>
+		{% endif %}
 
-		<section>
+		<section class="artist">
 			<div class="grid container">
 				<div class="col two_third-width section-header">
 					<span class="overtitle">Artist Spotlight</span>
@@ -18,7 +20,7 @@
 						<ul class="social-media">
 							{% if page.facebook %}<li><a href="{{ page.facebook }}" class="facebook">Facebook</a></li>{% endif %}
 							{% if page.twitter %}<li><a href="{{ page.twitter }}" class="twitter">Twitter</a></li>{% endif %}
-							{% if page.google %}<li><a href="{{ page.google }}" class="facebook">Google+</a></li>{% endif %}
+							{% if page.google %}<li><a href="{{ page.google }}" class="google">Google+</a></li>{% endif %}
 						</ul>
 					{% endif %}
 				</div>

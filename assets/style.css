@@ -214,6 +214,14 @@ section {
 		text-transform: uppercase;
 	}
 
+.artist .section-header {
+	margin-bottom: 2rem;
+}
+
+.artist .section-header p {
+	margin-bottom: 2rem;
+}
+
 /* @end */
 
 /* @group thumbnails */
@@ -285,6 +293,8 @@ section {
 }
 
 .social-media {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 	list-style: none;
 	text-align: center;
 }
