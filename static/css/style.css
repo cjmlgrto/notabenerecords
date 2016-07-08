@@ -73,9 +73,9 @@ nav a {
 
 
 .actions .button {
+	display: block;
 	max-width: 240px;
 	padding: .75rem 0;
-	display: block;
 }
 
 .button {
@@ -162,9 +162,9 @@ header a {
 	height: 400px;
 	background-size: 100%;
 	background-color: rgba(0,0,0,.1);
+	background-position: center center;
 	border-top: 1px solid rgba(0,0,0,.1);
 	border-bottom: 1px solid rgba(0,0,0,.1);
-	background-position: center center;
 }
 
 section {
@@ -248,8 +248,8 @@ section {
 		}
 
 		.meta .subtitle {
-			font-size: 16px;
 			color: #8E8E93;
+			font-size: 16px;
 		}
 
 /* @end */
@@ -274,19 +274,19 @@ footer .site-nav li {
 }
 
 footer .site-nav .button {
-	font-weight: 500;
+	padding: 0;
 	color: #8E8E93;
+	font-weight: 500;
 	text-shadow: none;
 	background-color: transparent;
-	padding: 0;
 }
 
 .copyright {
 	clear: both;
 	width: 100%;
-	text-align: right;
-	font-size: 14px;
 	color: #C7C7CC;
+	font-size: 14px;
+	text-align: right;
 }
 
 /* @end */
@@ -323,11 +323,11 @@ footer .site-nav .button {
 @media (max-width: 720px) {
 
 	.site-nav .button {
-		font-weight: 500;
+		padding: 0;
 		color: #8E8E93;
+		font-weight: 500;
 		text-shadow: none;
 		background-color: transparent;
-		padding: 0;
 	}
 
 	.quarter-width {
@@ -343,10 +343,7 @@ footer .site-nav .button {
 
 @media (max-width: 320px) {
 
-	.col,
-	.full-width,
-	.half-width,
-	.quarter-width {
+	.col, .full-width, .half-width, .quarter-width {
 		display: block;
 		margin-left: 0;
 		margin-right: 0;
