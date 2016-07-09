@@ -251,7 +251,8 @@ section {
 	.thumbnail {
 		padding-top: 98%;
 		background-size: 100%;
-		border: 1px solid rgba(0,0,0,.1);
+/*		border: 1px solid rgba(0,0,0,.1);*/
+		box-shadow: 0 0 0 1px rgba(0,0,0,.1) inset;
 		background-color: rgba(0,0,0,.1);
 		background-position: center center;
 	}
