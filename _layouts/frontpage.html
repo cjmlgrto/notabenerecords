@@ -49,7 +49,7 @@
 				<div class="col full-width">
 					<div class="heading">
 						<h1>Featured Albums</h1>
-						{% if featured_albums_description %}
+						{% if page.featured_albums_description %}
 							<h2>{{ page.featured_albums_description | markdownify  }}</h2>
 						{% endif %}
 					</div>
@@ -72,13 +72,45 @@
 			</div>
 		</section>
 
+		<!-- actions -->
+		<section class="two_up">
+			<div class="grid">
+				<div class="col half-width">
+					<div class="heading">
+						<h1>Calling all Musicians</h1>
+						{% if page.artists_action_description %}
+							<h2>{{ page.artists_action_description | markdownify }}</h2>
+						{% endif %}
+					</div>
+					{% if page.artists_action_link %}
+						<div class="actions">
+							<a href="{{ page.artists_action_link %}}" class="button secondary">Apply as an artist</a>
+						</div>
+					{% endif %}
+				</div>
+				<div class="col half-width">
+					<div class="heading">
+						<h1>Promote your Brand</h1>
+						{% if page.partners_action_description %}
+							<h2>{{ page.partners_action_description | markdownify }}</h2>
+						{% endif %}
+					</div>
+					{% if page.partners_action_link %}
+						<div class="actions">
+							<a href="{{ page.partners_action_link %}}" class="button tertiary">Apply as a partner</a>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</section>
+
 		<!-- featured partners -->
 		<section>
 			<div class="grid">
 				<div class="col full-width">
 					<div class="heading">
 						<h1>Featured Partners</h1>
-						{% if featured_partners_description %}
+						{% if page.featured_partners_description %}
 							<h2>{{ page.featured_partners_description | markdownify  }}</h2>
 						{% endif %}
 					</div>
@@ -94,38 +126,6 @@
 							</a>
 						{% endif %}
 					{% endfor %}
-				</div>
-			</div>
-		</section>
-
-		<!-- actions -->
-		<section>
-			<div class="grid">
-				<div class="col half-width">
-					<div class="heading">
-						<h1>Calling all Musicians</h1>
-						{% if artists_action_description %}
-							<h2>{{ page.artists_action_description | markdownify }}</h2>
-						{% endif %}
-					</div>
-					{% if page.artists_action_link %}
-						<div class="actions">
-							<a href="{{ page.artists_action_link %}}" class="button secondary">Apply as an artist</a>
-						</div>
-					{% endif %}
-				</div>
-				<div class="col half-width">
-					<div class="heading">
-						<h1>Promote your Brand</h1>
-						{% if partners_action_description %}
-							<h2>{{ page.partners_action_description | markdownify }}</h2>
-						{% endif %}
-					</div>
-					{% if page.partners_action_link %}
-						<div class="actions">
-							<a href="{{ page.partners_action_link %}}" class="button tertiary">Apply as a partner</a>
-						</div>
-					{% endif %}
 				</div>
 			</div>
 		</section>

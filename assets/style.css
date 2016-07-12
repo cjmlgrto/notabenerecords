@@ -178,6 +178,10 @@ section .heading h2 {
 	color: #8E8E93;
 }
 
+section .heading h2 p {
+	line-height: 1.4;
+}
+
 section .heading .overtitle {
 	display: block;
 	font-size: 0.9rem;
@@ -307,6 +311,10 @@ section .avatar {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: center;
+}
+
+.two_up {
+	margin: 2rem auto 4rem;
 }
 
 /* ======================================================= */
