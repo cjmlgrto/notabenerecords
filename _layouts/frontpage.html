@@ -56,7 +56,7 @@
 				</div>
 				<div class="tiles">
 					{% for artist in site.artists %}
-						{% for album in artist %}
+						{% for album in artist.albums %}
 							{% if album.is_featured == true %}
 								<a href="{{ artist.url }}" class="col quarter-width tile">
 									<div class="image" style="background-image:url({{ album.image }})"></div>

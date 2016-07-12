@@ -159,7 +159,7 @@ section {
 	padding-right: 0;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-attachment: top center;
+	background-attachment: center;
 	background-color: rgba(0,0,0,.1);
 	border-top: 1px solid rgba(0,0,0,.1);
 	border-bottom: 1px solid rgba(0,0,0,.1);
@@ -215,11 +215,23 @@ section .actions {
 .actions .media a {
 	width: 2rem;
 	height: 2rem;
-	border-radius: 1rem;
 	border-bottom: none;
 	display: inline-block;
 	text-indent: -9999rem;
-	background-color: #8E8E93;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.facebook {
+	background-image: url('img/facebook.svg');
+}
+
+.twitter {
+	background-image: url('img/twitter.svg');
+}
+
+.instagram {
+	background-image: url('img/instagram.svg');
 }
 
 .actions .button {

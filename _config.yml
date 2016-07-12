@@ -30,37 +30,37 @@ defaults:
   values:
     title: Artist Name
     description: A short description of the artist can go here
-    profile_image: ''
+    image: ''
     cover_image: ''
-    official_website: ''
+    website: ''
+    is_featured: false
     social_media:
       facebook: ''
       instagram: ''
       twitter: ''
     albums:
-      - album_title: ''
-        album_image: ''
-        album_year: ''
-        is_featured_album: false
+      - title: ''
+        image: ''
+        year: ''
+        is_featured: false
     permalink: /artists/:title
     layout: artist_page
-    is_featured: false
 - scope:
     path: ''
     type: partners
   values:
     title: Company Name
     description: A short description of the company can go here
-    profile_image: ''
+    image: ''
     cover_image: ''
-    official_website: ''
+    website: ''
+    is_featured: false
     social_media:
       facebook: ''
       instagram: ''
       twitter: ''
     permalink: /partners/:title
     layout: partner_page
-    is_featured: false
 - scope:
     path: ''
     type: store
