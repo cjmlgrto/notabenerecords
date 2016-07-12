@@ -1,29 +1,80 @@
-name: Nota Bene Records
-description: The website for Nota Bene Records
-author: Nota Bene Records
-url:
-
-twitter:
-color:
-
-markdown: kramdown
-
+---
+title: Nota Bene Records
+timezone: Australia/Melbourne
 collections:
+  posts:
+    title: Posts
+    output: true
   artists:
+    title: Artists
     output: true
-    permalink: /artists/:path/
   partners:
-    output: false
-  store:
+    title: Partners
     output: true
-    permalink: /store/:path/
-
+  store:
+    title: Store
+    output: true
+  uploads:
+    title: Uploads
+    output: true
 defaults:
-  - scope:
-      type: artists
-    values:
-      layout: artist
-  - scope:
-      type: store
-    values:
-      layout: store
+- scope:
+    path: ''
+    type: posts
+  values:
+    title: Post Title
+    permalink: /posts/:title
+- scope:
+    path: ''
+    type: artists
+  values:
+    title: Artist Name
+    description: A short description of the artist can go here
+    profile_image: ''
+    cover_image: ''
+    official_website: ''
+    social_media:
+      facebook: ''
+      instagram: ''
+      twitter: ''
+    albums:
+      - album_title: ''
+        album_image: ''
+        album_year: ''
+        is_featured_album: false
+    permalink: /artists/:title
+    layout: artist_page
+    is_featured: false
+- scope:
+    path: ''
+    type: partners
+  values:
+    title: Company Name
+    description: A short description of the company can go here
+    profile_image: ''
+    cover_image: ''
+    official_website: ''
+    social_media:
+      facebook: ''
+      instagram: ''
+      twitter: ''
+    permalink: /partners/:title
+    layout: partner_page
+    is_featured: false
+- scope:
+    path: ''
+    type: store
+  values:
+    title: Store Item Name
+    description: A short description of the store item can go here
+    image: ''
+    price: ''
+    link: ''
+    permalink: /store/:title
+    layout: store_item_page
+description: Website description goes here
+url: ''
+email: contact@notabenerecords.com
+color: '#333333'
+
+
