@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+	{% include head.html %}
+	<body>
+		{% include header.html %}
+		{% if page.cover_image %}
+			<section class="cover" style="background-image:url({{ page.cover_image }})"></section>
+		{% endif %}
+		<section>
+			<div class="grid">
+				<div class="col full-width">
+					<div class="heading">
+						<span class="overtitle">Artist Spotlight</span>
+						<h1>{{ page.title }}</h1>
+						{% if page.description %}
+							<h2>{{ page.description | markdownify  }}</h2>
+						{% endif %}
+					</div>
+					<div class="actions">
+						<ul class="media">
+							<li><a href="/" class="facebook">Facebook</a></li>
+							<li><a href="/" class="instagram">Instagram</a></li>
+							<li><a href="/" class="twitter">Twitter</a></li>
+						</ul>
+						{% if page.website %}
+							<a href="{{ page.website }}" class="button primary">View official website</a>
+						{% endif %}
+					</div>
+				</div>
+				<div class="tiles">
+					{% for album in page.albums %}
+						<a href="{{ page.url }}" class="col quarter-width tile">
+							<div class="image" style="background-image:url({{ album.image }})"></div>
+							<div class="meta">
+								<span class="title">{{ album.title }}</span>
+								<span class="subtitle">{{ album.year }}</span>
+							</div>
+						</a>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+		{% include footer.html %}
+	</body>
+	{% include scripts.html %}
+</html>
