@@ -9,6 +9,5 @@ social_media:
 - type: facebook
 - type: instagram
 - type: twitter
-artists: Artist Name
 ---
 
