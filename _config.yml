@@ -2,20 +2,20 @@
 title: Nota Bene Records
 timezone: Australia/Melbourne
 collections:
-  posts:
-    title: Posts
-    output: true
-  uploads:
-    title: Uploads
-    output: true
   artists:
     title: Artists
     output: true
   partners:
     title: Partners
     output: true
+  posts:
+    title: Posts
+    output: true
   store:
     title: Store
+    output: true
+  uploads:
+    title: Uploads
     output: true
 defaults:
 - scope:
@@ -23,7 +23,7 @@ defaults:
     type: posts
   values:
     title: Post Title
-    permalink: /posts/:title
+    permalink: "/posts/:title"
 - scope:
     path: ''
     type: artists
@@ -35,18 +35,18 @@ defaults:
     website: ''
     is_featured: false
     social_media:
-    - type: 'facebook'
+    - type: facebook
       url: ''
-    - type: 'instagram'
+    - type: instagram
       url: ''
-    - type: 'twitter'
+    - type: twitter
       url: ''
     albums:
     - title: ''
       image: ''
       year: ''
       is_featured: false
-    permalink: /artists/:title
+    permalink: "/artists/:title"
     layout: artist-page
 - scope:
     path: ''
@@ -59,13 +59,13 @@ defaults:
     website: ''
     is_featured: false
     social_media:
-    - type: 'facebook'
+    - type: facebook
       url: ''
-    - type: 'instagram'
+    - type: instagram
       url: ''
-    - type: 'twitter'
+    - type: twitter
       url: ''
-    permalink: /partners/:title
+    permalink: "/partners/:title"
     layout: partner-page
 - scope:
     path: ''
@@ -76,12 +76,12 @@ defaults:
     image: ''
     price: ''
     link: ''
-    permalink: /store/:title
+    permalink: "/store/:title"
     layout: store-page
 sass:
-    sass_dir: _sass
-    style: compressed
+  sass_dir: _sass
+  style: compressed
 description: Website description goes here
 url: ''
 email: contact@notabenerecords.com
-color: '#333333'
+color: "#333333"

@@ -1,10 +1,7 @@
 ---
-
 title: Store
+permalink: "/store/"
 layout: store
-permalink: /store/
-
-description: ""
-
+description: ''
 ---
 

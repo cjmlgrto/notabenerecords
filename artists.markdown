@@ -1,9 +1,7 @@
 ---
-
 title: Artists
+permalink: "/artists/"
 layout: artists
-permalink: /artists/
-
-description: ""
-
+description: ''
 ---
+

@@ -1,9 +1,7 @@
 ---
-
 title: Partners
+permalink: "/partners/"
 layout: partners
-permalink: /partners/
-
-description: ""
-
+description: ''
 ---
+
