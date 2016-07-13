@@ -1,10 +1,8 @@
 ---
 title: Contact
 permalink: "/contact/"
-description: |-
-  Make music. Connect with brands. Build an audience.
-
-  We're revolutionising the way musicians make, share and sell music by connecting them with brands.
+description: Looking for something you can’t find? Want to negotiate terms with us?
+  Want to find out more? Send us an email, and we’ll get back to you promptly!
 social_media:
 - type: facebook
   url: 
