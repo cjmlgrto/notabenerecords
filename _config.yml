@@ -35,14 +35,17 @@ defaults:
     website: ''
     is_featured: false
     social_media:
-      facebook: ''
-      instagram: ''
-      twitter: ''
+    - type: 'facebook'
+      url: ''
+    - type: 'instagram'
+      url: ''
+    - type: 'twitter'
+      url: ''
     albums:
-      - title: ''
-        image: ''
-        year: ''
-        is_featured: false
+    - title: ''
+      image: ''
+      year: ''
+      is_featured: false
     permalink: /artists/:title
     layout: artist-page
 - scope:
@@ -56,9 +59,12 @@ defaults:
     website: ''
     is_featured: false
     social_media:
-      facebook: ''
-      instagram: ''
-      twitter: ''
+    - type: 'facebook'
+      url: ''
+    - type: 'instagram'
+      url: ''
+    - type: 'twitter'
+      url: ''
     permalink: /partners/:title
     layout: partner-page
 - scope:
