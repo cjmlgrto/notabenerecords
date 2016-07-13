@@ -5,6 +5,9 @@ collections:
   posts:
     title: Posts
     output: true
+  uploads:
+    title: Uploads
+    output: true
   artists:
     title: Artists
     output: true
@@ -13,9 +16,6 @@ collections:
     output: true
   store:
     title: Store
-    output: true
-  uploads:
-    title: Uploads
     output: true
 defaults:
 - scope:
@@ -44,7 +44,7 @@ defaults:
         year: ''
         is_featured: false
     permalink: /artists/:title
-    layout: artist_page
+    layout: artist-page
 - scope:
     path: ''
     type: partners
@@ -60,7 +60,7 @@ defaults:
       instagram: ''
       twitter: ''
     permalink: /partners/:title
-    layout: partner_page
+    layout: partner-page
 - scope:
     path: ''
     type: store
@@ -71,7 +71,10 @@ defaults:
     price: ''
     link: ''
     permalink: /store/:title
-    layout: store_item_page
+    layout: store-page
+sass:
+    sass_dir: _sass
+    style: compressed
 description: Website description goes here
 url: ''
 email: contact@notabenerecords.com
