@@ -1,5 +1,6 @@
 ---
 title: Artist Name
+published: false
 description: A short description of the artist can go here
 image: "/uploads/image.jpg"
 cover_image: "/uploads/cover.jpg"
@@ -15,11 +16,11 @@ social_media:
 albums:
 - title: Album Title
   image: "/uploads/album.jpg"
-  year: '2015'
+  year: 2015
   is_featured: true
 - title: Album Title
   image: "/uploads/album.jpg"
-  year: '2015'
+  year: 2015
   is_featured: true
 ---
 
