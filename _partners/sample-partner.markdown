@@ -7,10 +7,8 @@ website: http://example.com
 is_featured: true
 social_media:
 - type: facebook
-  url: ''
 - type: instagram
-  url: ''
 - type: twitter
-  url: ''
+artists: Artist Name
 ---
 
