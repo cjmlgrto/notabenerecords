@@ -1,0 +1,28 @@
+/* ======================================================= */
+/* FOOTER */
+
+footer {
+	padding: 1rem;
+	min-height: 2rem;
+	margin: 1rem auto;
+}
+
+footer .logo {
+	font-size: 1em;
+}
+
+footer .copyright {
+	color: #C7C7CC;
+	font-size: .75em;
+	margin-top: .5rem;
+	text-align: right;
+}
+
+@media (max-width: 640px) {
+
+	footer .copyright {
+		text-align: center;
+	}
+
+
+}

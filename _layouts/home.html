@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+	{% include head.html %}
+	<body>
+		{% include header.html %}
+		<!-- featured artist -->
+		{% for artist in site.artists %}
+			{% if artist.is_featured == true %}
+				<section class="cover" style="background-image:url({{ artist.cover_image }})"></section>
+				<section>
+					<div class="grid">
+						<div class="col full-width">
+							<div class="heading">
+								<span class="overtitle">Artist Spotlight</span>
+								<h1>{{ artist.title }}</h1>
+								{% if artist.description %}
+									<h2>{{ artist.description | markdownify  }}</h2>
+								{% endif %}
+							</div>
+							<div class="actions">
+								{% if artist.website %}
+									<a href="{{ artist.website }}" class="button primary">View official website</a>
+								{% endif %}
+								<a href="{{ artist.url }}" class="button secondary">View artist page</a>
+							</div>
+						</div>
+						<div class="tiles">
+							<a href="/" class="col half-width tile">
+								<div class="image" style="background-image:url({{ artist.image }})"></div>
+							</a>
+							{% for album in artist.albums limit:2 %}
+								<a href="{{ artist.url }}" class="col quarter-width tile">
+									<div class="image" style="background-image:url({{ album.image }})"></div>
+									<div class="meta">
+										<span class="title">{{ album.title }}</span>
+										<span class="subtitle">{{ album.year }}</span>
+									</div>
+								</a>
+							{% endfor %}
+						</div>
+					</div>
+				</section>
+			{% endif %}
+		{% endfor %}
+
+		<!-- featured albums -->
+		<section>
+			<div class="grid">
+				<div class="col full-width">
+					<div class="heading">
+						<h1>Featured Albums</h1>
+						{% if page.featured_albums_description %}
+							<h2>{{ page.featured_albums_description | markdownify  }}</h2>
+						{% endif %}
+					</div>
+				</div>
+				<div class="tiles">
+					{% for artist in site.artists %}
+						{% for album in artist.albums %}
+							{% if album.is_featured == true %}
+								<a href="{{ artist.url }}" class="col quarter-width tile">
+									<div class="image" style="background-image:url({{ album.image }})"></div>
+									<div class="meta">
+										<span class="title">{{ album.title }}</span>
+										<span class="subtitle">{{ album.year }}</span>
+									</div>
+								</a>
+							{% endif %}
+						{% endfor %}
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+
+		{% include actions.html %}
+
+		<!-- featured partners -->
+		<section>
+			<div class="grid">
+				<div class="col full-width">
+					<div class="heading">
+						<h1>Featured Partners</h1>
+						{% if page.featured_partners_description %}
+							<h2>{{ page.featured_partners_description | markdownify  }}</h2>
+						{% endif %}
+					</div>
+				</div>
+				<div class="tiles">
+					{% for partner in site.partners %}
+						{% if partner.is_featured == true %}
+							<a href="{{ partner.url }}" class="col quarter-width tile">
+								<div class="image" style="background-image:url({{ partner.image }})"></div>
+								<div class="meta">
+									<span class="title">{{ partner.title }}</span>
+								</div>
+							</a>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+
+		{% include footer.html %}
+	</body>
+	{% include scripts.html %}
+</html>

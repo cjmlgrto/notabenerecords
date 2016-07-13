@@ -1,0 +1,61 @@
+/* ======================================================= */
+/* THE GRID */
+
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	box-sizing: border-box;
+}
+
+.grid {
+	margin: 0 auto;
+	max-width: 960px;
+	text-align: center;
+}
+
+.grid .col {
+	vertical-align: top;
+	display: inline-block;
+	margin-left: calc(2% - 2px);
+	margin-right: calc(2% - 2px);
+}
+
+.grid .full-width {
+	width: calc(100% - 4% - 4px);
+}
+
+.grid .half-width {
+	width: calc(50% - 4% - 2px);
+}
+
+.grid .quarter-width {
+	width: calc(25% - 4% - 1px);
+}
+
+@media (max-width: 640px) {
+
+	.grid .half-width {
+		width: calc(100% - 4% - 4px);
+	}
+
+	.grid .quarter-width {
+		width: calc(50% - 4% - 2px);
+	}
+
+
+}
+
+@media (max-width: 375px) {
+
+	.grid .col,
+	.grid .full-width,
+	.grid .half-width,
+	.grid .quarter-width {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		display: block;
+	}
+
+}

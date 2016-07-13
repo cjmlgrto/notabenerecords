@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+	{% include head.html %}
+	<body>
+		{% include header.html %}
+		<section>
+			<div class="grid">
+				<div class="col full-width">
+					<div class="heading">
+						<h1>{{ page.title }}</h1>
+						{% if page.description %}
+							<h2>{{ page.description | markdownify  }}</h2>
+						{% endif %}
+					</div>
+				</div>
+				<div class="tiles">
+					{% for item in site.store %}
+						<a href="{{ item.url }}" class="col quarter-width tile">
+							<div class="image" style="background-image:url({{ item.image }})"></div>
+							<div class="meta">
+								<span class="title">{{ item.title }}</span>
+								<span class="subtitle">{{ item.price }}</span>
+							</div>
+						</a>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+		{% include footer.html %}
+	</body>
+	{% include scripts.html %}
+</html>

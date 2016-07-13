@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+	{% include head.html %}
+	<body>
+		{% include header.html %}
+		{% if page.cover_image %}
+			<section class="cover"></section>
+		{% endif %}
+		<section>
+			<div class="grid">
+				<div class="col full-width">
+					<div class="heading">
+						<span class="overtitle">{{ site.title }}</span>
+						<h1>{{ page.title }}</h1>
+						{% if page.description %}
+							<h2>{{ page.description | markdownify }}</h2>
+						{% endif %}
+					</div>
+				</div>
+				<div class="tiles">
+					<div class="col half-width tile">
+						<div class="image" style="background-image:url({{ page.large_image }})"></div>
+						{% if page.image_caption %}
+							<div class="meta">
+								<span class="subtitle">{{ page.image_caption }}</span>
+							</div>
+						{% endif %}
+					</div>
+					<div class="col quarter-width tile">
+						<div class="image" style="background-image:url({{ page.nathan_image }})"></div>
+						<div class="meta">
+							<span class="title">Nathan Batham</span>
+							<span class="subtitle">Co-founder</span>
+						</div>
+					</div>
+					<div class="col quarter-width tile founder">
+						<div class="image" style="background-image:url({{ page.shane_image }})"></div>
+						<div class="meta">
+							<span class="title">Shane McMahon</span>
+							<span class="subtitle">Co-founder</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="grid">
+				<div class="col full-width">
+					<div class="heading">
+						<span class="overtitle">Our values</span>
+						<h1>{{ page.content_header }}</h1>
+					</div>
+				</div>
+				<div class="content">
+					{{ content }}
+				</div>
+			</div>
+		</section>
+
+		{% include footer.html %}
+	</body>
+	{% include scripts.html %}
+</html>

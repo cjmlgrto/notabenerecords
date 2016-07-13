@@ -1,0 +1,10 @@
+<a href="/" class="logo">{{ site.title }}</a>
+<nav class="menu">
+	<ul>
+		<li{% if page.title == "Artists"%} class="active"{% endif %}><a href="{{ site.url }}/artists">Artists</a></li>
+		<li{% if page.title == "Partners"%} class="active"{% endif %}><a href="{{ site.url }}/partners">Partners</a></li>
+		<li{% if page.title == "Store"%} class="active"{% endif %}><a href="{{ site.url }}/store">Store</a></li>
+		<li{% if page.title == "About"%} class="active"{% endif %}><a href="{{ site.url }}/about">About</a></li>
+		<li{% if page.title == "Contact"%} class="active"{% endif %}><a href="{{ site.url }}/contact" class="button">Contact</a></li>
+	</ul>
+</nav>

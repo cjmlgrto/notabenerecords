@@ -1,0 +1,87 @@
+---
+title: Nota Bene Records
+timezone: Australia/Melbourne
+collections:
+  artists:
+    title: Artists
+    output: true
+  partners:
+    title: Partners
+    output: true
+  posts:
+    title: Posts
+    output: true
+  store:
+    title: Store
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    title: Post Title
+    permalink: "/posts/:title"
+- scope:
+    path: ''
+    type: artists
+  values:
+    title: Artist Name
+    description: A short description of the artist can go here
+    image: ''
+    cover_image: ''
+    website: ''
+    is_featured: false
+    social_media:
+    - type: facebook
+      url: ''
+    - type: instagram
+      url: ''
+    - type: twitter
+      url: ''
+    albums:
+    - title: ''
+      image: ''
+      year: ''
+      is_featured: false
+    permalink: "/artists/:title"
+    layout: artist-page
+- scope:
+    path: ''
+    type: partners
+  values:
+    title: Company Name
+    description: A short description of the company can go here
+    image: ''
+    cover_image: ''
+    website: ''
+    is_featured: false
+    social_media:
+    - type: facebook
+      url: ''
+    - type: instagram
+      url: ''
+    - type: twitter
+      url: ''
+    permalink: "/partners/:title"
+    layout: partner-page
+- scope:
+    path: ''
+    type: store
+  values:
+    title: Store Item Name
+    description: A short description of the store item can go here
+    image: ''
+    price: ''
+    link: ''
+    permalink: "/store/:title"
+    layout: store-page
+description: Website description goes here
+email: contact@notabenerecords.com
+color: "#333333"
+url: 
+sass:
+  sass_dir: _sass
+  style: compressed
