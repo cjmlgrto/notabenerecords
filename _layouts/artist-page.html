@@ -28,7 +28,8 @@
 					</div>
 				</div>
 				<div class="tiles">
-					{% for album in page.albums %}
+					{% assign albums = page.albums | sort: 'year' | reverse %}
+					{% for album in albums %}
 						<a href="{{ page.url }}" class="col quarter-width tile">
 							<div class="image" style="background-image:url({{ album.image }})"></div>
 							<div class="meta">
