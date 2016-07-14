@@ -8,8 +8,8 @@ Description: |-
 Cover Image: "/uploads/production.jpg"
 Large Image: "/uploads/studio.jpg"
 Large Image Caption: The production studio
-Nathan Image: 
-Shane Image: 
+Nathan Image: "/uploads/nathan.jpg"
+Shane Image: "/uploads/shane.jpg"
 About Section Header: Why music?
 layout: about
 ---
