@@ -118,7 +118,7 @@ Below is a guide on how to do basic functions for editing the website. If you ha
 3. A rundown of each input field is listed below.
 4. Repeat steps 2 - 3 for any new partner you want to add.
 
-### Partner Page Input Fields
+### Store Page Input Fields
 
 - **Title**: The store item's name
 - **Content**: this is not utilised on the website
