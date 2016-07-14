@@ -1,16 +1,16 @@
 ---
 title: Envato
-description: A digital marketplace for creatives
-image: "/uploads/envato-image.jpg"
-cover_image: "/uploads/envato-cover.jpg"
-website: http:/envato.com/
-is_featured: true
-social_media:
-- type: facebook
-  url: http:/envato.com/
-- type: instagram
-  url: http:/envato.com/
-- type: twitter
-  url: http:/envato.com/
+Description: A digital marketplace for creatives
+Image: "/uploads/envato-image.jpg"
+Cover Image: "/uploads/envato-cover.jpg"
+Website: http:/envato.com/
+Featured: true
+Social Media:
+- Type: facebook
+  URL: http:/envato.com/
+- Type: instagram
+  URL: http:/envato.com/
+- Type: twitter
+  URL: http:/envato.com/
 ---
 

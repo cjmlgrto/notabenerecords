@@ -1,8 +1,8 @@
 ---
 title: Screens T-Shirt
-description: A shirt for all (screen) sizes and shapes. Matches your hipster chinos.
-image: "/uploads/shirt.jpg"
-price: "$9.99"
-link: https://www.shopify.com.au/buy-button
+Description: A shirt for all (screen) sizes and shapes. Matches your hipster chinos.
+Image: "/uploads/shirt.jpg"
+Price: "$9.99"
+URL: https://www.shopify.com.au/buy-button
 ---
 

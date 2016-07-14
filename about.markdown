@@ -1,16 +1,16 @@
 ---
 title: About
 permalink: "/about/"
-description: |-
+Description: |-
   Make music. Connect with brands. Build an audience.
 
   We're revolutionising the way musicians make, share and sell music by connecting them with brands.
-cover_image: "/uploads/production.jpg"
-large_image: "/uploads/studio.jpg"
-image_caption: The production studio
-nathan_image: 
-shane_image: 
-content_header: Why music?
+Cover Image: "/uploads/production.jpg"
+Large Image: "/uploads/studio.jpg"
+Large Image Caption: The production studio
+Nathan Image: "/uploads/nathan.jpg"
+Shane Image: "/uploads/shane.jpg"
+About Section Header: Why music?
 layout: about
 ---
 

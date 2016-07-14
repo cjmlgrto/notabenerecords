@@ -7,18 +7,18 @@
 			<div class="grid">
 				<div class="col full-width">
 					<div class="heading">
-						<h1>{{ page.title }}</h1>
-						{% if page.description %}
-							<h2>{{ page.description | markdownify  }}</h2>
+						<h1>{{ page['title'] }}</h1>
+						{% if page['Description'] %}
+							<h2>{{ page['Description'] | markdownify  }}</h2>
 						{% endif %}
 					</div>
 				</div>
 				<div class="tiles">
-					{% for partner in site.partners %}
-						<a href="{{ partner.url }}" class="col quarter-width tile">
-							<div class="image" style="background-image:url({{ partner.image }})"></div>
+					{% for partner in site['partners'] %}
+						<a href="{{ partner['url'] }}" class="col quarter-width tile">
+							<div class="image" style="background-image:url({{ partner['Image'] }})"></div>
 							<div class="meta">
-								<span class="title">{{ partner.title }}</span>
+								<span class="title">{{ partner['title'] }}</span>
 							</div>
 						</a>
 					{% endfor %}
