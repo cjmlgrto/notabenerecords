@@ -16,15 +16,15 @@ Social Media:
 Albums:
 - Title: It's Never Been Like That
   Image: "/uploads/phoenix-its_never_been_like_that.jpg"
-  Year: '2006'
-  Featured: false
+  Year: 2006
+  Featured: true
 - Title: Wolfgang Amadeus Phoenix
   Image: "/uploads/phoenix-wolfgang_amadeus_phoenix.jpg"
-  Year: '2009'
-  Featured: true
+  Year: 2009
+  Featured: false
 - Title: Bankrupt!
   Image: "/uploads/phoenix-bankrupt.jpg"
-  Year: '2013'
+  Year: 2013
   Featured: true
 ---
 
