@@ -81,7 +81,7 @@ defaults:
 Description: Website description goes here
 Email: contact@notabenerecords.com
 Color: "#333333"
-url:
+url: 
 sass:
   sass_dir: _sass
   style: compressed
