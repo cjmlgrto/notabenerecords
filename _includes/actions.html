@@ -4,26 +4,26 @@
 		<div class="col half-width">
 			<div class="heading">
 				<h1>Calling all Musicians</h1>
-				{% if page.artists_action_description %}
-					<h2>{{ page.artists_action_description | markdownify }}</h2>
+				{% if page['Artists Action Description'] %}
+					<h2>{{ page['Artists Action Description'] | markdownify }}</h2>
 				{% endif %}
 			</div>
-			{% if page.artists_action_link %}
+			{% if page['Artists Action Link'] %}
 				<div class="actions">
-					<a href="{{ page.artists_action_link %}}" class="button secondary">Apply as an artist</a>
+					<a href="{{ page['Artists Action Link'] %}}" class="button secondary">Apply as an artist</a>
 				</div>
 			{% endif %}
 		</div>
 		<div class="col half-width">
 			<div class="heading">
 				<h1>Promote your Brand</h1>
-				{% if page.partners_action_description %}
-					<h2>{{ page.partners_action_description | markdownify }}</h2>
+				{% if page['Partners Action Description'] %}
+					<h2>{{ page['Partners Action Description'] | markdownify }}</h2>
 				{% endif %}
 			</div>
-			{% if page.partners_action_link %}
+			{% if page['Partners Action Link'] %}
 				<div class="actions">
-					<a href="{{ page.partners_action_link %}}" class="button tertiary">Apply as a partner</a>
+					<a href="{{ page['Partners Action Link'] %}}" class="button tertiary">Apply as a partner</a>
 				</div>
 			{% endif %}
 		</div>

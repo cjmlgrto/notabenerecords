@@ -4,37 +4,37 @@
 	<body>
 		{% include header.html %}
 		<!-- featured artist -->
-		{% for artist in site.artists %}
-			{% if artist.is_featured == true %}
-				<section class="cover" style="background-image:url({{ artist.cover_image }})"></section>
+		{% for artist in site['artists'] %}
+			{% if artist['Featured'] == true %}
+				<section class="cover" style="background-image:url({{ artist['Cover Image'] }})"></section>
 				<section>
 					<div class="grid">
 						<div class="col full-width">
 							<div class="heading">
 								<span class="overtitle">Artist Spotlight</span>
-								<h1>{{ artist.title }}</h1>
-								{% if artist.description %}
-									<h2>{{ artist.description | markdownify  }}</h2>
+								<h1>{{ artist['title'] }}</h1>
+								{% if artist['Description'] %}
+									<h2>{{ artist['Description'] | markdownify  }}</h2>
 								{% endif %}
 							</div>
 							<div class="actions">
-								{% if artist.website %}
-									<a href="{{ artist.website }}" class="button primary">View official website</a>
+								{% if artist['Website'] %}
+									<a href="{{ artist['Website'] }}" class="button primary">View official website</a>
 								{% endif %}
-								<a href="{{ artist.url }}" class="button secondary">View artist page</a>
+								<a href="{{ artist['url'] }}" class="button secondary">View artist page</a>
 							</div>
 						</div>
 						<div class="tiles">
 							<a href="/" class="col half-width tile">
-								<div class="image" style="background-image:url({{ artist.image }})"></div>
+								<div class="image" style="background-image:url({{ artist['Image'] }})"></div>
 							</a>
-							{% assign albums = artist.albums | sort: 'date' | reverse %}
+							{% assign albums = artist['Albums'] | sort: 'date' | reverse %}
 							{% for album in albums limit:2 %}
-								<a href="{{ artist.url }}" class="col quarter-width tile">
-									<div class="image" style="background-image:url({{ album.image }})"></div>
+								<a href="{{ artist['url'] }}" class="col quarter-width tile">
+									<div class="image" style="background-image:url({{ album['Image'] }})"></div>
 									<div class="meta">
-										<span class="title">{{ album.title }}</span>
-										<span class="subtitle">{{ album.year }}</span>
+										<span class="title">{{ album['Title'] }}</span>
+										<span class="subtitle">{{ album['Year'] }}</span>
 									</div>
 								</a>
 							{% endfor %}
@@ -50,21 +50,21 @@
 				<div class="col full-width">
 					<div class="heading">
 						<h1>Featured Albums</h1>
-						{% if page.featured_albums_description %}
-							<h2>{{ page.featured_albums_description | markdownify  }}</h2>
+						{% if page['Featured Albums Description'] %}
+							<h2>{{ page['Featured Albums Description'] | markdownify  }}</h2>
 						{% endif %}
 					</div>
 				</div>
 				<div class="tiles">
-					{% for artist in site.artists %}
-						{% assign albums = artist.albums | sort: 'date' | reverse %}
+					{% for artist in site['artists'] %}
+						{% assign albums = artist['Albums'] | sort: 'date' | reverse %}
 						{% for album in albums %}
-							{% if album.is_featured == true %}
-								<a href="{{ artist.url }}" class="col quarter-width tile">
-									<div class="image" style="background-image:url({{ album.image }})"></div>
+							{% if album['Featured'] == true %}
+								<a href="{{ artist['url'] }}" class="col quarter-width tile">
+									<div class="image" style="background-image:url({{ album['Image'] }})"></div>
 									<div class="meta">
-										<span class="title">{{ album.title }}</span>
-										<span class="subtitle">{{ album.year }}</span>
+										<span class="title">{{ album['Title'] }}</span>
+										<span class="subtitle">{{ album['Year'] }}</span>
 									</div>
 								</a>
 							{% endif %}
@@ -82,18 +82,18 @@
 				<div class="col full-width">
 					<div class="heading">
 						<h1>Featured Partners</h1>
-						{% if page.featured_partners_description %}
-							<h2>{{ page.featured_partners_description | markdownify  }}</h2>
+						{% if page['Featured Partners Description'] %}
+							<h2>{{ page['Featured Partners Description'] | markdownify  }}</h2>
 						{% endif %}
 					</div>
 				</div>
 				<div class="tiles">
-					{% for partner in site.partners %}
-						{% if partner.is_featured == true %}
-							<a href="{{ partner.url }}" class="col quarter-width tile">
-								<div class="image" style="background-image:url({{ partner.image }})"></div>
+					{% for partner in site['partners'] %}
+						{% if partner['Featured'] == true %}
+							<a href="{{ partner['url'] }}" class="col quarter-width tile">
+								<div class="image" style="background-image:url({{ partner['Image'] }})"></div>
 								<div class="meta">
-									<span class="title">{{ partner.title }}</span>
+									<span class="title">{{ partner['title'] }}</span>
 								</div>
 							</a>
 						{% endif %}

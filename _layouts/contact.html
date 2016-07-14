@@ -7,18 +7,18 @@
 			<div class="grid">
 				<div class="col full-width">
 					<div class="heading">
-						<h1>{{ page.title }}</h1>
-						{% if page.description %}
-							<h2>{{ page.description | markdownify  }}</h2>
+						<h1>{{ page['title']}}</h1>
+						{% if page['Description'] %}
+							<h2>{{ page['Description'] | markdownify  }}</h2>
 						{% endif %}
 					</div>
 					<div class="actions">
 						<ul class="media">
-							{% for media in page.social_media %}
-							<li><a href="{{ media.url }}" class="{{ media.type }}">{{ media.type }}</a></li>
+							{% for media in page['Social Media'] %}
+							<li><a href="{{ media['URL'] }}" class="{{ media['Type'] }}">{{ media['Type'] }}</a></li>
 							{% endfor %}
 						</ul>
-						<a href="mailto:{{ site.email }}?subject=General Inquiry" class="button primary">Send an email</a>
+						<a href="mailto:{{ site['Email'] }}?subject=General Inquiry" class="button primary">Send an email</a>
 					</div>
 				</div>
 			</div>
