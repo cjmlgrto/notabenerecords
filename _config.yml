@@ -80,6 +80,7 @@ defaults:
     layout: store-page
 Description: Website description goes here
 Email: contact@notabenerecords.com
+Terms: "#"
 Color: "#333333"
 url: 
 sass:
